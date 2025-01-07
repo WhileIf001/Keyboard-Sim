@@ -1,0 +1,217 @@
+:root {
+  --TF-percent-border-color: #2E00BF;
+  --F-percent-border-color: red;
+  --SF-percent-border-color: #05FF2A;
+  --OH-percent-border-color: #2100B5;
+  --BTN61-backG: none;
+  --sbtns-height: 40px;
+  --lbtns-height: 50px;
+  --btn-fe-height: 45px;
+  --btn-so-height: 52px;
+  --btns-border: 4px;
+}
+@font-face {
+  font-family: 'Rydero';
+  src: url('Fonts/Rydero.ttf');
+}
+@font-face{
+  font-family: 'zaplin';
+  src: url('Fonts/Zaplin.ttf');
+}
+@font-face{
+  font-family: 'Wargate';
+  src: url('Fonts/Wargate.ttf');
+}
+body{
+  background: black;
+  color: #0015FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+body.SwichBorder{
+  --TF-percent-border-color: #02FFE5;
+  --F-percent-border-color: #9A02FF;
+  --SF-percent-border-color: #D2FF00;
+  --OH-percent-border-color: #B062FF;
+  --BTN61-backG: rgba(255,255,0,0.75);
+}
+.key {
+  background: url('Keyboard/KEYBOARD.webp');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 820px;
+  height: 300px;
+}
+.keyboard, .lkeyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.Perror{
+  position: relative;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Rydero';
+  font-size: 30px;
+  text-align: center;
+}
+.keyboard > button {
+  background: none;
+  width: 5.75%;
+  height: var(--sbtns-height);
+  border-radius: 7px;
+  border: var(--btns-border) solid;
+  animation: anim 5s linear infinite;
+  box-shadow: 1px 2px 0px white;
+  margin: 0.3% 0;
+}
+.lkeyboard > button {
+  background: none;
+  width: 6%;
+  height: var(--lbtns-height);
+  border-radius: 7px;
+  opacity: 0.75;
+  border: var(--btns-border) solid;
+  animation: anim 5s linear infinite;
+  box-shadow: 2px 2px 0px white;
+  margin-bottom: 0.2%;
+}
+.BTN31 {
+  min-width: 12.6%;
+}
+.BTN33{
+  min-width: 8.15%;
+}
+.BTN46{
+  min-width: 10.3%;
+}
+.BTN48, .BTN75, .BTN78 {
+  min-height: var(--btn-fe-height);
+  min-width: 10.7%;
+}
+.BTN61 {
+  min-width: 7.25%;
+  min-height: var(--btn-so-height);
+}
+.BTN63 {
+  min-width: 7.3%;
+}
+.BTN82 {
+  min-width: 32%;
+  margin-right: 0.5%;
+}
+.BTN85 {
+  min-width: 8%;
+}
+.BTN85 {
+  min-width: 7.25%;
+}
+.BTN87 {
+  margin-right: 0.5%;
+}
+.keyboard> button:active , .lkeyboard > button:active {
+  box-shadow: 0px 0px; 
+}
+.keyInput {
+  font-family: 'Wargate';
+  color: green;
+  text-align: left;
+  font-size: 18px;
+  margin-top: -6px;
+  height: 37px;
+  width: 99%;
+  max-width: 818px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background: black;
+  outline: none;
+  border: 1px solid;
+  border-bottom: 2px solid;
+  animation: anim 5s linear infinite;
+}
+.s-btn {
+  display: flex;
+  justify-content: center;
+  margin: 20%;
+}
+.Start {
+  min-width: 280px;
+  height: 80px;
+  background: #019A13;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 30px;
+  box-shadow: 0px 10px #03760D;
+  font-family: 'zaplin';
+  transition: 0.1s;
+}
+.Start:active {
+  transform: translateY(7px);
+  box-shadow: 0px 3px #05680E;
+}
+ 
+@keyframes anim{
+  25%{border-color: var(--TF-percent-border-color);}
+  50%{border-color: var(--F-percent-border-color);}
+  75%{border-color: var(--SF-percent-border-color);}
+  100%{border-color: var(--OH-percent-border-color);}
+}
+@keyframes pAnim{
+  0% {opacity: 0;}
+  10%{opacity: 0.2}
+  20% {opacity: 0.4;}
+  30%{opacity: 0.6}
+  40% {opacity: 0.8}
+  50%{opacity: 1}
+  60% {opacity: 1}
+  70%{opacity: 1}
+  80% {opacity: 0.4;}
+  90%{opacity: 0.2}
+  100% {opacity: 0}
+}
+@keyframes Attention{
+  0%{opacity: 0}
+  25%{opacity: 0.25}
+  50%{opacity: 0.5}
+  75%{opacity: 0.75}
+  100%{opacity: 1}
+}
+.Rotating {
+  position: relative;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Rydero';
+  font-size: 25px;
+  text-align: center;
+}
+.useH{
+ position: relative;
+ top: 150px;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ font-family: 'Rydero';
+ font-size: 25px;
+ text-align: center;
+  }
+@media(min-width: 850px){
+ :root{
+   --sbtns-height: 40px;
+   --btn-fe-height: 50px;
+   --btn-so-height: 52px;
+   --btns-border: 5px;
+ }
+ .key {
+   height: 320px;
+ }
+ .keyInput {
+   height: 50px;
+   font-size: 30px;
+ }
+}
