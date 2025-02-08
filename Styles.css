@@ -3,56 +3,67 @@
   --F-percent-border-color: red;
   --SF-percent-border-color: #05FF2A;
   --OH-percent-border-color: #2100B5;
-  --BTN61-backG: none;
   --sbtns-height: 40px;
   --lbtns-height: 50px;
   --btn-fe-height: 45px;
   --btn-so-height: 52px;
   --btns-border: 4px;
+  --main-background-ht: 300px;
+  --main-background-wd: 775px;
+  --display-inp-ht: 37px;
+  --display-inp-fs: 18px;
 }
+
 @font-face {
   font-family: 'Rydero';
   src: url('Fonts/Rydero.ttf');
 }
-@font-face{
+
+@font-face {
   font-family: 'zaplin';
   src: url('Fonts/Zaplin.ttf');
 }
-@font-face{
+
+@font-face {
   font-family: 'Wargate';
   src: url('Fonts/Wargate.ttf');
 }
-body{
+
+body {
   background: black;
+  height: 100vh;
   color: #0015FF;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
-body.SwichBorder{
+
+body.SwichBorder {
   --TF-percent-border-color: #02FFE5;
   --F-percent-border-color: #9A02FF;
   --SF-percent-border-color: #D2FF00;
   --OH-percent-border-color: #B062FF;
-  --BTN61-backG: rgba(255,255,0,0.75);
 }
+
 .key {
   background: url('Keyboard/KEYBOARD.webp');
   background-size: 100%;
   background-repeat: no-repeat;
   width: 100%;
-  max-width: 820px;
-  height: 300px;
+  max-width: var(--main-background-wd);
+  height: var(--main-background-ht);
 }
-.keyboard, .lkeyboard {
+
+.keyboard,
+.lkeyboard {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-.Perror{
+
+.Perror {
   position: relative;
   top: 150px;
   left: 50%;
@@ -61,7 +72,8 @@ body.SwichBorder{
   font-size: 30px;
   text-align: center;
 }
-.keyboard > button {
+
+.keyboard>button {
   background: none;
   width: 5.75%;
   height: var(--sbtns-height);
@@ -71,7 +83,8 @@ body.SwichBorder{
   box-shadow: 1px 2px 0px white;
   margin: 0.3% 0;
 }
-.lkeyboard > button {
+
+.lkeyboard>button {
   background: none;
   width: 6%;
   height: var(--lbtns-height);
@@ -82,51 +95,66 @@ body.SwichBorder{
   box-shadow: 2px 2px 0px white;
   margin-bottom: 0.2%;
 }
+
 .BTN31 {
   min-width: 12.6%;
 }
-.BTN33{
+
+.BTN33 {
   min-width: 8.15%;
 }
-.BTN46{
+
+.BTN46 {
   min-width: 10.3%;
 }
-.BTN48, .BTN75, .BTN78 {
+
+.BTN48,
+.BTN75,
+.BTN78 {
   min-height: var(--btn-fe-height);
   min-width: 10.7%;
 }
+
 .BTN61 {
   min-width: 7.25%;
   min-height: var(--btn-so-height);
 }
+
 .BTN63 {
   min-width: 7.3%;
 }
+
 .BTN82 {
   min-width: 32%;
   margin-right: 0.5%;
 }
+
 .BTN85 {
   min-width: 8%;
 }
+
 .BTN85 {
   min-width: 7.25%;
 }
+
 .BTN87 {
   margin-right: 0.5%;
 }
-.keyboard> button:active , .lkeyboard > button:active {
-  box-shadow: 0px 0px; 
+
+.keyboard>button:active,
+.lkeyboard>button:active {
+  box-shadow: 0px 0px;
 }
+
 .keyInput {
   font-family: 'Wargate';
   color: green;
   text-align: left;
-  font-size: 18px;
+  font-size: var(--display-inp-fs);
   margin-top: -6px;
-  height: 37px;
+  height: var(--display-inp-ht);
   width: 99%;
-  max-width: 818px;
+  max-width: var(--main-background-wd);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   background: black;
@@ -135,11 +163,13 @@ body.SwichBorder{
   border-bottom: 2px solid;
   animation: anim 5s linear infinite;
 }
+
 .s-btn {
   display: flex;
   justify-content: center;
   margin: 20%;
 }
+
 .Start {
   min-width: 280px;
   height: 80px;
@@ -152,37 +182,98 @@ body.SwichBorder{
   font-family: 'zaplin';
   transition: 0.1s;
 }
+
 .Start:active {
   transform: translateY(7px);
   box-shadow: 0px 3px #05680E;
 }
- 
-@keyframes anim{
-  25%{border-color: var(--TF-percent-border-color);}
-  50%{border-color: var(--F-percent-border-color);}
-  75%{border-color: var(--SF-percent-border-color);}
-  100%{border-color: var(--OH-percent-border-color);}
+
+@keyframes anim {
+  25% {
+    border-color: var(--TF-percent-border-color);
+  }
+
+  50% {
+    border-color: var(--F-percent-border-color);
+  }
+
+  75% {
+    border-color: var(--SF-percent-border-color);
+  }
+
+  100% {
+    border-color: var(--OH-percent-border-color);
+  }
 }
-@keyframes pAnim{
-  0% {opacity: 0;}
-  10%{opacity: 0.2}
-  20% {opacity: 0.4;}
-  30%{opacity: 0.6}
-  40% {opacity: 0.8}
-  50%{opacity: 1}
-  60% {opacity: 1}
-  70%{opacity: 1}
-  80% {opacity: 0.4;}
-  90%{opacity: 0.2}
-  100% {opacity: 0}
+
+@keyframes pAnim {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.2
+  }
+
+  20% {
+    opacity: 0.4;
+  }
+
+  30% {
+    opacity: 0.6
+  }
+
+  40% {
+    opacity: 0.8
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  60% {
+    opacity: 1
+  }
+
+  70% {
+    opacity: 1
+  }
+
+  80% {
+    opacity: 0.4;
+  }
+
+  90% {
+    opacity: 0.2
+  }
+
+  100% {
+    opacity: 0
+  }
 }
-@keyframes Attention{
-  0%{opacity: 0}
-  25%{opacity: 0.25}
-  50%{opacity: 0.5}
-  75%{opacity: 0.75}
-  100%{opacity: 1}
+
+@keyframes Attention {
+  0% {
+    opacity: 0
+  }
+
+  25% {
+    opacity: 0.25
+  }
+
+  50% {
+    opacity: 0.5
+  }
+
+  75% {
+    opacity: 0.75
+  }
+
+  100% {
+    opacity: 1
+  }
 }
+
 .Rotating {
   position: relative;
   top: 150px;
@@ -192,27 +283,78 @@ body.SwichBorder{
   font-size: 25px;
   text-align: center;
 }
-.useH{
- position: relative;
- top: 150px;
- left: 50%;
- transform: translate(-50%, -50%);
- font-family: 'Rydero';
- font-size: 25px;
- text-align: center;
+
+.useH {
+  position: relative;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Rydero';
+  font-size: 25px;
+  text-align: center;
+}
+@media(min-width: 576px) {
+  :root {
+    --lbtns-height: 34px;
+    --sbtns-height: 25px;
+    --btn-fe-height: px;
+    --btn-so-height: px;
+    --btns-border: 3px;
+    --main-background-ht: 250px;
+    --main-background-wd: 540px;
+    --display-inp-ht: 30px;
+    --display-inp-fs: 20px;
   }
-@media(min-width: 850px){
- :root{
-   --sbtns-height: 40px;
-   --btn-fe-height: 50px;
-   --btn-so-height: 52px;
-   --btns-border: 5px;
- }
- .key {
-   height: 320px;
- }
- .keyInput {
-   height: 50px;
-   font-size: 30px;
- }
+}
+@media(min-width: 768px) {
+  :root {
+    --lbtns-height: 45px;
+    --sbtns-height: 35px;
+    --btn-fe-height: 45px;
+    --btn-so-height: 47px;
+    --btns-border: 4px;
+    --main-background-ht: 320px;
+    --main-background-wd: 736px;
+    --display-inp-ht: 40px;
+    --display-inp-fs: 25px;
+  }
+}
+@media(min-width: 992px) {
+  :root {
+    --lbtns-height: 53px;
+    --sbtns-height: 43px;
+    --btn-fe-height: 50px;
+    --btn-so-height: 55px;
+    --btns-border: 5px;
+    --main-background-ht: 320px;
+    --main-background-wd: 860px;
+    --display-inp-ht: 50px;
+    --display-inp-fs: 28px;
+  }
+}
+@media(min-width: 1200px) {
+  :root {
+    --lbtns-height: 62px;
+    --sbtns-height: 48px;
+    --btn-fe-height: 45px;
+    --btn-so-height: 47px;
+    --btns-border: 6px;
+    --main-background-ht: 380px;
+    --main-background-wd: 990px;
+    --display-inp-ht: 60px;
+    --display-inp-fs: 32px;
+  }
+}
+@media(min-width: 1400px) {
+  :root {
+    --lbtns-height: 79px;
+    --sbtns-height: 63px;
+    --btn-fe-height: 75px;
+    --btn-so-height: 88px;
+    --btns-border: 7px;
+    --main-background-ht: 500px;
+    --main-background-wd: 1300px;
+    --display-inp-ht: 70px;
+    --display-inp-fs: 38px;
+  }
 }
